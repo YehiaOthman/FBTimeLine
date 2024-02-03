@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profilepic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/_742242"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YehiaOthman"
+        app:layout_constraintStart_toEndOf="@id/iv_profilepic"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_posttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2hrs"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"
+        app:layout_constraintStart_toEndOf="@id/iv_profilepic"
+        android:layout_marginLeft="12dp"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/world"
+        app:layout_constraintStart_toEndOf="@id/tv_posttime"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#FREEPALESTINE"
+        app:layout_constraintTop_toBottomOf="@id/iv_profilepic"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:textSize="18dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_postpic"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:src="@drawable/palestine"
+        app:layout_constraintTop_toBottomOf="@id/tv_post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginTop="12dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_likespic"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/like2"
+        app:layout_constraintTop_toBottomOf="@id/iv_postpic"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11K"
+        app:layout_constraintTop_toBottomOf="@id/iv_postpic"
+        app:layout_constraintStart_toEndOf="@id/iv_likespic"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/tv_shares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1K shares"
+        app:layout_constraintTop_toBottomOf="@id/iv_postpic"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 comments"
+        app:layout_constraintTop_toBottomOf="@id/iv_postpic"
+        app:layout_constraintEnd_toStartOf="@id/tv_shares"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_likelogo"
+        android:layout_width="22dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_likespic"
+        app:layout_constraintEnd_toStartOf="@id/tv_likesbtn"
+        android:src="@drawable/like"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_likesbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_likelogo"
+        app:layout_constraintTop_toBottomOf="@id/iv_likespic"
+        app:layout_constraintEnd_toStartOf="@id/iv_commentlogo"
+        android:text="Likes"
+        android:textSize="18dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_commentlogo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toEndOf="@id/tv_likesbtn"
+        app:layout_constraintTop_toBottomOf="@id/iv_likespic"
+        app:layout_constraintEnd_toStartOf="@id/tv_commentsbtn"
+        android:src="@drawable/comment"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_commentsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_commentlogo"
+        app:layout_constraintTop_toBottomOf="@id/iv_likespic"
+        app:layout_constraintEnd_toStartOf="@id/iv_shareslogo"
+        android:text="Comments"
+        android:textSize="18dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_shareslogo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toEndOf="@id/tv_commentsbtn"
+        app:layout_constraintTop_toBottomOf="@id/iv_likespic"
+        app:layout_constraintEnd_toStartOf="@id/tv_sharesbtn"
+        android:src="@drawable/share"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_sharesbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_shareslogo"
+        app:layout_constraintTop_toBottomOf="@id/iv_likespic"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Shares"
+        android:textSize="18dp"
+
+
+        />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
